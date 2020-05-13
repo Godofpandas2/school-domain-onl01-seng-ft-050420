@@ -8,14 +8,14 @@ class School
 
   def add_student(name, grades)
     @name = name
-    @grades = grades
-    if @roster.include?(grades) == false
-      @roster[grades] = []
+    @grade = grade
+    if @roster.include?(grade) == false
+      @roster[grade] = []
     end
-    @roster[grades] << name
+    @roster[grade] << name
   end
 
-  def grades(num)
+  def grade(num)
     @roster[num]
   end
 
