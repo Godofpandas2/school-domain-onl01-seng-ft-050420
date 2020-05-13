@@ -6,16 +6,16 @@ class School
 
   attr_accessor :roster, :add_student
 
-  def add_student(name, grade)
+  def add_student(name, grades)
     @name = name
-    @grade = grade
-    if @roster.include?(grade) == false
-      @roster[grade] = []
+    @grade = grades
+    if @roster.include?(grades) == false
+      @roster[grades] = []
     end
-    @roster[grade] << name
+    @roster[grades] << name
   end
 
-  def grade(num)
+  def grades(num)
     @roster[num]
   end
 
