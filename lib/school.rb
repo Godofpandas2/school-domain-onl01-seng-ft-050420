@@ -3,4 +3,16 @@ class School
     @schools = schools
     @roster = {}
   end
+
+  attr_accessor :roster, :add_student
+
+  def add_student(name, grade)
+    @name = name
+    @grade = grade
+    if @roster.include?(grade) == false
+      @roster[grade] = []
+    end
+    @roster[grade] << name
+  end
+
 end
